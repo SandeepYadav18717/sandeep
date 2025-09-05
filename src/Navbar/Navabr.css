@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tablet */
+@media (max-width: 62rem) {   /* 992px */
+  .section {
+    font-size: 1.12rem;  /* 18px */
+    padding: 1.87rem;    /* 30px */
+  }
+
+  #container {
+    flex-wrap: wrap; /* agar jagah kam ho to line break ho */
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .nav-item {
+    padding: 0.62rem 1rem; /* 10px 16px */
+    font-size: 0.75rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 37.5rem) {   /* 600px */
+  .section {
+    font-size: 1rem;     /* 16px */
+    padding: 1.25rem;    /* 20px */
+  }
+
+  #container {
+    flex-direction: column; /* items ek ke neeche */
+    gap: 1rem;
+  }
+
+  .nav-item {
+    padding: 0.62rem 0.94rem;
+    font-size: 0.62rem;
+    width: 80%;   /* button jaisa look */
+    text-align: center;
+  }
+}
+
+#container {
+    height: 4.37rem; /* 70px */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #4e3940;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-item {
+    padding: 0.62rem 1.56rem; /* 10px 25px */
+    border-radius: 0.62rem;   /* 10px */
+    transition: all 0.4s ease;
+}
+
+#container .nav-item:hover {
+    text-shadow: 0.12rem 0.12rem 0.31rem whitesmoke;
+    box-shadow: 0 0.62rem 1.25rem rgba(0,0,0,0.5);
+    transform: translateY(-0.62rem) scale(1.1);
+    background-color:  #4e3940;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+body{
+    background: linear-gradient(135deg,black);
+    height: 100vh;
+}

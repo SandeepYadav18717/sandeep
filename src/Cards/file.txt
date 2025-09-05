@@ -1,0 +1,861 @@
+import "./Card.css";
+
+function Card(props) {
+  return (
+    <div className={props.className}>
+       {/* //<div className="card-1"> </div> */}
+      <div className={props.backClass}> 
+        {/* //<div className="Back"> </div> */}
+        <h3>{props.title}{props.icon}</h3>
+          {/* title="Machine Learning Project" */}
+        <p>{props.description}</p>
+      </div>
+    </div>
+  );
+}
+
+function Cards() {
+  return (
+    <div>
+    <text
+    
+        style={{
+          
+          color: "#FFD700",
+        fontFamily: 'Cinzel',
+          textAlign: "center",
+          fontSize: "40px",
+          marginTop: "25%",
+          marginLeft:"40%"
+        }}
+      >
+        Projects Describe
+      </text>
+
+      <div id="card-contain">
+        {/* Card-1 */}
+        <Card 
+        className="card-1"
+        backClass="Back"
+        title="A.I Based Project"
+        description="Developed a back-end system using Python and pandas to automatically send
+          tailored mass emails to more than 1000 recipients. Developed a user-friendly
+          front-end   , CSS, and JavaScript, enabling users to upload
+          files and extract over 100 email addresses. Successfully implemented logic to
+          dynamically populate email templates, reducing 20% manual effort."
+        />
+
+        {/* Card-2 */}
+        <Card
+          className="card-2"
+          backClass="Back-X"
+          title="Machine Learning Based"
+          description="Created a Supervised Learning model for Behavioral Pattern Recognition to
+          effectively arrange and distribute time for more than 15 user tasks. 10% more
+          user productivity and time savings were achieved through suggested performance
+          enhancements and intelligent time allocation using HTML, CSS, JavaScript, and ML."
+        />
+
+        {/* Card-3 */}
+        <Card
+          className="card-3"
+          backClass="Back"
+          title="Book Writing Project"
+          description="Co-authoring a technical book on Machine Learning (ML) concepts and applications with 1+ one or more faculty members. 
+ Using real-world examples in Python, I have written and organized more than 5 chapters on the basics of supervised learning techniques, such as linear regression. 
+"
+        />
+
+        {/* Card-4 */}
+        <Card
+          className="card-4"
+          backClass="Back-X"
+          title="Behavioral Pattern Recognition"
+          description="Created a Supervised Learning model for Behavioral Pattern Recognition to
+          effectively..."
+        />
+      </div>
+    </div>
+  );
+}
+export { Card };
+export default Cards;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
+
+.aesthetic-heading {
+  font-family: 'Cinzel', serif;
+  font-size: 65px;
+  letter-spacing: 4px;
+  color: #e0c097;
+  text-align: center;
+  margin-top: 50px;
+  text-shadow: 2px 2px 15px rgba(224, 192, 151, 0.6);
+}
+
+#card-contain{
+    display: flex;
+    
+    height:250px;
+    margin-top: 10%;
+    justify-content: center;
+    border-radius: 25px;
+    gap:4%
+    
+        
+  
+}
+
+
+.Back {
+  background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+  height: 250px;
+  width: 250px;
+  border-radius: 25px 80px 25px  80px;
+  border: 3px double gold;   
+   margin-left: 0px;
+   padding-left: 20px;
+   padding-top: 20px;
+  transition: transform 0s ease;
+  box-shadow: 5px 10px 18px 5px black ;
+  animation: card 1s ease-in-out 0s;
+    
+}
+@keyframes card {
+  0%{
+    transform: scale(0.5);
+    opacity: 0;
+  
+
+  }
+  
+ 
+  100%{
+    transform: scale(1);
+    opacity: 200;
+  }
+  
+}
+
+.Back:hover {
+ transform: rotateY(180deg);
+ height:400px;
+ color: wheat; 
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  border: 3px solid gold;
+  box-shadow: 5px 10px 18px  crimson;
+  font-family:'Montserrat' ;
+}
+
+.Back-X {
+  background: linear-gradient(-135deg, #3a1c71, #d76d77, #ffaf7b);
+  height: 250px;
+  width: 250px;
+  padding-left: 20px;
+  padding-top: 50px;
+  border-radius: 50px;
+   margin-left: 0px;
+  transition: transform 0s ease;
+  box-shadow: 5px 10px 18px 10px black;
+
+     
+}
+.Back-X:hover {
+  transform: rotateX(180deg);
+ height:400px;
+ padding-top: 20px;
+ color: wheat; 
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  border: 3px solid gold;
+  box-shadow: 5px 10px 18px  crimson;
+  font-family:'Montserrat' ;
+   
+
+ 
+}
+
+.card-1,.card-3  {
+  border-radius: 25px;
+  height: 250px;
+   margin-left: 40px;
+  color: transparent;
+  transition: transform 1s ease;
+  
+    
+}
+.card-1:hover {
+  transform: rotateY(180deg);
+
+ 
+}
+
+
+.card-2,.card-4 {
+
+  height: 450px;
+  width: 250px;
+  border-radius: 25px;
+   margin-left: 40px;
+  transition: transform 1s ease;
+  color: transparent;
+    
+}
+
+.card-2:hover {
+  transform: rotatex(180deg); 
+  
+}
+
+
+.card-3:hover {
+  transform: rotateY(180deg);
+   color: wheat;  
+}
+
+.card-4:hover {
+  transform: rotateX(180deg); 
+  
+}
+body{
+ background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #f8f8f8;
+            min-height: 100vh;
+            padding: 20px;
+}
+h3{
+  color: yellow;
+  font-size: xx-large;
+  margin-top:0% ;
+}
+h3:hover{
+  color: yellow;
+  
+  margin-top:0% ;
+}
+p{
+  margin-top: 0%;
+}
+import { Card } from "../Cards/Cards";
+import "./certi.css";
+import python from "./python.png";
+import Html from "./Html.jpg";
+import image from "./image_cd97ae3d-5304-4b07-9a13-3357f6d9babd20230831_163952.jpg";
+import go from "./Googleanalytics.jpg";
+
+function Cert() {
+  return (
+    <div>
+      <h1> Certifications & Achievements</h1>
+
+      <div id="card-skills">
+        <ul>
+          <img src={python} alt="python" />
+
+          <img src={Html} alt="" />
+
+          <img src={go} />
+         
+        </ul>
+      </div>
+
+      
+    </div>
+  );
+}
+
+export default Cert;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;     /* bada heading */
+  text-align: center;    /* beech me laane ke liye */
+  margin-bottom: 20px;
+  color: gold;           /* classy golden heading */
+}
+#card-skills{
+    border:4px solid gold;
+     height: 500px;
+  display: flex;
+  margin-left: 5%;
+  align-items: center;
+  gap:2%;
+  border-radius: 20px;
+  color: white;
+  width:90%;
+  background: linear-gradient(135deg, rgba(15, 12, 41, 0.8), rgba(48, 43, 99, 0.8));
+ padding: 0px;
+            margin-top: 50px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+/* .card1,.card2,.card3,.card4{
+                background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            width: 280px;
+            height:100px;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+        }
+        .card3{
+            margin-top: 25%;
+        }
+        .card2{
+            margin-left: 25%;
+        }
+
+
+.card1:hover,.card2:hover,.card3:hover,.card4:hover,.card-skill.h3:hover{
+   
+
+
+  transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+} */
+img  {
+      background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            width: 350px;
+            height:250px;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+}
+img:hover{
+     transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+import { useState } from "react";
+import "./contact.css";
+
+function Contact() {
+  const [name, setName] = useState("");
+  const [Email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  function on(event){
+    setName(event.target.value)
+ 
+  }
+   function email(event){
+    setEmail(event.target.value)
+ 
+  }
+   function Phone(event){
+    setPhone(event.target.value)
+ 
+  }
+    
+
+  return (
+    <>
+    <div id="heading">Get in <span style={{color:"gold"}}>Touch</span> With Us
+</div>
+<br />
+<div id="value">
+      <input
+        type="text"
+        onChange={on}
+        
+        placeholder="Enter your name"
+        className="input-box"
+      /><br />
+      {name}
+      
+      <br />
+      
+      <input
+      className="input-box"
+        type="email"
+        onChange={email}
+        placeholder="Enter your Email"
+      /><br />
+     Email is: {Email}
+<br />
+       <input
+       className="input-box"
+        type="Phone"
+        onChange={Phone}
+        
+        placeholder="Enter your Phone number"
+      />
+      <br />
+      Mobile No:{phone}
+      <br />
+    <br />
+    
+  <button >submit</button>
+    </div>
+    </>
+  );
+}
+
+
+export default Contact;
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: azure;
+    color: aqua;
+    font-size: large;
+}
+.input-box {
+             display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 2%;
+            padding: 18px 40px;
+            background: linear-gradient(135deg, var(--gold) 0%, #B8860B 100%);
+            color: var(--dark);
+            border: none;
+            font-weight: 600;
+            border-radius: 2px;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            cursor: pointer;
+       
+         
+
+}
+@keyframes input {
+   25% {
+    transform: translateY(-1225px);
+  }
+  50% {
+    transform: translateZ(100px) translateY(100px);
+  }
+  75% {
+    transform: translateZ(1225px);
+  }
+}
+    
+
+.input-box:focus {
+  border-color: #007bff;
+  box-shadow: -4px 15px 25px rgba(240, 241, 243, 0.5);
+  width: 500px;
+ 
+}
+button{
+    display: inline-flex;
+            align-items: center;
+           
+            gap: 15px;
+            padding: 18px 40px;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            color: Gold;
+            border: yellow;
+            font-weight: 600;
+            border-radius: 2px;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            cursor: pointer;
+}
+button:hover{
+     transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+}
+#heading{
+    font-size: xxx-large;
+    color:  #f9dcdc;
+    text-shadow: 1px 1px 4px  gold;
+    text-align: center;
+}
+import "./Navabr.css";
+
+
+
+import { useState,useEffect } from 'react'
+function Navbar() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    // Trigger animation when component mounts
+    setLoaded(true);
+  }, []);
+  function About(){
+    location.href = 'Home.jsx';
+    console.log("clickedded");
+  }
+  function Project(){
+    location.href = 'Cards.jsx';
+    console.log("clicked");
+  }
+
+    return (
+        <div id="container">
+       <a href="#home" className="nav-item">Home</a>
+        <a href="#skills" className="nav-item">Skills</a>
+        <a href="#projects" className="nav-item">Projects</a>
+        <a href="#contact" className="nav-item">Contact</a>
+        </div>
+    )
+}
+
+export default Navbar;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+html {
+  scroll-behavior: smooth;
+}
+#container {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #4e3940;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+#container
+
+.nav-item {
+    padding: 10px 25px;
+    border-radius: 10px;
+  
+   
+    transition: all 0.4s ease;
+}
+
+#container .nav-item:hover {
+    text-shadow: 2px 2px 5px whitesmoke;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transform: translateY(-10px) scale(1.1);
+    background-color:  #4e3940;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+body{
+    background: linear-gradient(135deg,black);
+    height: 100vh;
+}
+
+import "./Home.css";
+
+function Home() {
+  return (
+    <>
+      
+     <div id="detail">
+     <div id="overlay">I'm sandeep Yadav</div>
+     <div id="bg-Photo"></div>
+     <div id="intro">
+          I am a dedicated and passionate individual with a strong interest in
+          software development and data analytics. I am eager to apply my skills
+          and knowledge in a professional setting, contributing to innovative
+          projects and collaborating with a dynamic team. I am committed to
+          continuous learning and growth in the ever-evolving field of
+          technology.
+        </div>
+        
+
+   <div id="name">
+          Sandeep Yadav
+        </div>
+   <div id="role">
+          Aspiring Software Developer
+        </div>
+
+     </div>
+     <br/><br/><br/><br/><br/>
+    </>
+  );
+}
+
+export default Home;
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+
+#detail {
+  position: relative;
+  margin-top: 0%;
+  height: auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bg-Photo {
+  height: 250px;
+  width: 250px;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  border-radius: 50%;
+  margin-bottom: 30px;
+  margin-left: 100vh;
+  box-shadow: 12px 5px 25px #ff5e62;
+  animation: photoSlide 1.5s ease forwards;
+}
+
+@keyframes photoSlide {
+  from {
+    transform: translateY(-200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+#name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 10px;
+  margin-left: 50%;
+  animation: nameSlide 1.5s ease forwards;
+}
+
+@keyframes nameSlide {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+#role {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: #ffd700;
+  margin-bottom: 20px;
+  animation: roleSlide 1.5s ease forwards;
+  margin-left: 50%;
+}
+
+@keyframes roleSlide {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+#intro {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-right: 100vh;
+  max-width: 100vh;
+  text-shadow: 2px 2px 5px black;
+  animation: introSlide 2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes introSlide {
+  from {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+#overlay {
+  position: absolute;
+  color:  #ff5e62;
+  top: 40%;
+  left: 5%;
+  font-size: 400%;
+  height: 100%;
+}
+
+#name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top: 20px;
+
+
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fbc2eb);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#overlay{
+   font-family:  'Dancing Script', cursive;
+  font-size: 3.5rem;
+  text-align: center;
+
+
+}
+import { Card } from "../Cards/Cards"
+import "./Skills.css"
+
+
+function Skills() {
+  return (
+    <>
+      <h1> Technologies & Tools</h1>
+      <div id="card-skill">
+        <Card
+          className="card-skill-1"
+          title={<h3>⚛️</h3>}
+          description="React"
+        />
+        <Card
+          className="card-skill-2"
+          title={<h3>🌐</h3>}
+          description="HTML / CSS"
+        />
+        <Card
+          className="card-skill-3"
+          title={<h3>📜</h3>}
+          description="JavaScript"
+        />
+        <Card
+          className="card-skill-4"
+          title={<h3>🗄️</h3>}
+          description="SQL"
+        />
+      </div>
+
+      {/* another div line 2 */}
+      <div id="card-skill">
+        <Card
+          className="card-skill-1"
+          title={<h3>🐼</h3>}
+          description="Pandas"
+        />
+        <Card
+          className="card-skill-2"
+          title={<h3>🐍</h3>}
+          description="Python"
+        />
+        <Card
+          className="card-skill-3"
+          title={<h3>🐙</h3>}
+          description="github"
+        />
+        <Card
+          className="card-skill-4"
+          title={<h3>🛠️</h3>}
+          description="Tools"
+        />
+      </div>
+    </>
+  )
+}
+
+export default Skills;
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+h1 {
+  text-align: center;
+  color: gold;
+  
+  margin-top: 20px;
+  font-size: 250%;
+  margin-top: 5%;
+  font-family: 'Bebas Neue';
+}
+#card-skill {
+  height: 200px;
+  display: flex;
+  
+  align-items: center;
+  gap:2%;
+  border-radius: 20px;
+  color: white;
+  width:100%
+ 
+  
+  
+  
+}
+.card-skill-1,.card-skill-2,.card-skill-3,.card-skill-4{
+    background-color:  rgba(15, 12, 41, 0.7);
+    border: 1px solid gold;
+    height:145px;
+    width:250px;
+    background: rgba(15, 12, 41, 0.5);
+    border-radius: 25px;
+    margin-left: 4%;
+    margin-top: 5%;
+    text-align: center;
+    color: #ffd700
+    
+    
+ ;
+
+
+}
+.card-skill-1:hover,.card-skill-2:hover,.card-skill-3:hover,.card-skill-4:hover,.card-skill.h3:hover{
+    border-color: #ffd700;
+    box-shadow: 10px 15px 15px rgba(255, 215, 0, 0.2),  0 2.5px 5px crimson;
+    transform: scale(1.3);
+    border:2px, double ,gold;
+   
+}
+.card-skill.h3 {
+  color: yellow;
+  background: transparent;
+  display: inline-block;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  height: 35px;
+  width:250px;
+}
+
+
+
+
+
+import Navbar from "./navbar/Navbar";
+import Index from "./Pages/Index";
+import Skills from "./Pages/Skills";
+import Cards from "./Cards/Cards";
+import Contact from "./Contact/contact";
+
+import "./App.css";
+
+function App() {
+  return (
+    <>
+      <Navbar />
+
+      <section id="home" className="section">
+        <Index />
+      </section>
+
+      <section id="skills" className="section">
+        <Skills />
+      </section>
+
+      <section id="projects" className="section">
+        <Cards />
+      </section>
+
+      <section id="contact" className="section">
+        <Contact />
+      </section>
+    </>
+  );
+}
+
+export default App;
+
+
+
+
+
+

@@ -1,0 +1,124 @@
+#card-contain{
+    display: flex;
+    height:15.6rem;
+    margin-top: 10%;
+    justify-content: center;
+    border-radius: 1.56rem;
+    gap:4%;
+}
+
+.Back {
+  background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+  height: 15.6rem;
+  width: 15.6rem;
+  border-radius: 1.56rem 5rem 1.56rem 5rem;
+  border: 0.19rem double gold;   
+  margin-left: 0rem;
+  padding-left: 1.25rem;
+  padding-top: 1.25rem;
+  transition: transform 0s ease;
+  box-shadow: 0.31rem 0.62rem 1.12rem 0.31rem black ;
+  animation: card 1s ease-in-out 0s;
+}
+
+@keyframes card {
+  0%{
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.Back:hover {
+ transform: rotateY(180deg);
+ height:25rem;
+ color: wheat; 
+ background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+ border: 0.19rem solid gold;
+ box-shadow: 0.31rem 0.62rem 1.12rem crimson;
+ font-size: small;
+ font-family:'Montserrat' ;
+}
+
+.Back-X {
+  background: linear-gradient(-135deg, #3a1c71, #d76d77, #ffaf7b);
+  height: 15.6rem;
+  width: 15.6rem;
+  padding-left: 1.25rem;
+  padding-top: 3.12rem;
+  border-radius: 3.12rem;
+  margin-left: 0rem;
+  transition: transform 0s ease;
+  box-shadow: 0.31rem 0.62rem 1.12rem 0.62rem black;
+}
+
+.Back-X:hover {
+  transform: rotateX(180deg);
+  height:25rem;
+  padding-top: 1.25rem;
+  font-size: small;
+  color: wheat; 
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  border: 0.19rem solid gold;
+  box-shadow: 0.31rem 0.62rem 1.12rem crimson;
+  font-family:'Montserrat' ;
+}
+
+.card-1,.card-3  {
+  border-radius: 1.56rem;
+  height: 15.6rem;
+  margin-left: 2.5rem;
+  color: transparent;
+  transition: transform 1s ease;
+}
+
+.card-1:hover {
+  transform: rotateY(180deg);
+}
+
+.card-2,.card-4 {
+  height: 28.12rem;
+  width: 15.6rem;
+  border-radius: 1.56rem;
+  margin-left: 2.5rem;
+  transition: transform 1s ease;
+  color: transparent;
+}
+
+.card-2:hover {
+  transform: rotatex(180deg); 
+}
+
+.card-3:hover {
+  transform: rotateY(180deg);
+  color: wheat;  
+}
+
+.card-4:hover {
+  transform: rotateX(180deg); 
+}
+
+body{
+ background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+ color: #f8f8f8;
+ min-height: 100vh;
+ padding: 1.25rem;
+}
+
+h3{
+  color: yellow;
+  font-size: 2rem;
+  margin-top:0% ;
+}
+
+h3:hover{
+  color: yellow;
+  margin-top:0% ;
+}
+
+p{
+  margin-top: 0%;
+}

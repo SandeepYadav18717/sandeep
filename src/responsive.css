@@ -1,0 +1,106 @@
+/* ==================== Responsive Styles ==================== */
+
+/* Tablet screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  #container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
+  #intro {
+    max-width: 90%;
+    font-size: 1rem;
+  }
+  #overlay {
+    font-size: 2rem;
+    left: 2%;
+  }
+  #card-contain,
+  #card-skill,
+  #card-skills {
+    gap: 15px;
+  }
+}
+
+/* Mobile screens (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Navbar */
+  #container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #container .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Home section */
+  #bg-Photo {
+    height: 180px;
+    width: 180px;
+    margin: 0 auto 15px;
+  }
+  #name {
+    font-size: 2rem;
+  }
+  #role {
+    font-size: 1.2rem;
+  }
+  #intro {
+    font-size: 0.95rem;
+    padding: 0 15px;
+  }
+  #overlay {
+    position: static;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  /* Cards */
+  #card-contain,
+  #card-skill,
+  #card-skills {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Back, .Back-X,
+  .card-1, .card-2, .card-3, .card-4,
+  .card-skill-1, .card-skill-2, .card-skill-3, .card-skill-4 {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  /* Certifications */
+  #card-skills img {
+    width: 90%;
+    height: auto;
+  }
+
+  /* Contact */
+  .input-box {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+  button {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  #name {
+    font-size: 1.5rem;
+  }
+  #role {
+    font-size: 1rem;
+  }
+  #intro {
+    font-size: 0.85rem;
+  }
+  #overlay {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;    
+  text-align: center;    
+  margin-bottom: 1.25rem; 
+  color: gold;           
+}
+
+#card-skills {
+  border: 0.25rem solid gold;
+  height: 31.25rem; 
+  display: flex;
+  margin-left: 5%;
+  align-items: center;
+  gap: 2%;
+  border-radius: 1.25rem;
+  color: white;
+  width: 90%;
+  background: linear-gradient(135deg, rgba(15, 12, 41, 0.8), rgba(48, 43, 99, 0.8));
+  padding: 0rem;
+  margin-top: 0rem;
+  border: 0.12rem solid rgba(255, 215, 0, 0.3);
+}
+
+img {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.62rem;
+  padding: 0.94rem;
+  width: 21.87rem;    
+  height: 15.62rem;   
+  margin-left: 0.94rem;
+  margin-top: 0rem;
+  transition: all 0.3s ease;
+}
+
+img:hover {
+  transform: translateY(-0.31rem);
+  box-shadow: 0 0.62rem 1.25rem rgba(0, 0, 0, 0.3);
+}

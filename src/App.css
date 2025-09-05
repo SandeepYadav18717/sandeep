@@ -1,0 +1,16 @@
+html { 
+  scroll-behavior: smooth; 
+}
+
+.section {
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(5rem); /* 80px */
+  transition: all 1.2s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
